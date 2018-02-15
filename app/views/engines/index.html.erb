@@ -1,0 +1,7 @@
+<h2>Engine Index</h2>
+
+<% @engines.each do |engine| %>
+<h2><%= link_to engine.manufacturer.name + " " + engine.name, engine_path(engine) %></h2>
+<% end %>
+
+<%= link_to "Back", root_path %>

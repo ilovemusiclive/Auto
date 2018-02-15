@@ -1,0 +1,7 @@
+<h1>Index Body Page</h1>
+
+<% @bodies.each do |body| %>
+<h2><%= link_to body.name, body_path(body) %></h2>
+<% end %>
+
+<%= link_to "Back", root_path %>

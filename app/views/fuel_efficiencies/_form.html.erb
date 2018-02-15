@@ -1,0 +1,16 @@
+<h2>Fuel Efficiency Form</h2>
+
+
+<%= simple_form_for @fuel_efficiency, :html => { :multipart => true } do |f| %></br></br>
+
+  <%= f.input :mpg %></br></br>
+  <%= f.input :kml %></br></br>
+
+
+  <%= f.input :no_index, as: :boolean, checked_value: true, unchecked_value: false %></br></br>
+
+  <%= f.button :submit %></br></br>
+
+<% end %>
+
+<%= link_to "Back", root_path %>

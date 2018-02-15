@@ -1,0 +1,9 @@
+<h1>Show Body Page</h1>
+
+<h4><%= @body.name %></h4>
+<h4><%= @body.description %></h4>
+<h4><%= @body.date %></h4>
+
+<%= link_to "Back", bodies_path %>
+<%= link_to "Edit", edit_body_path(@body) %>
+<%= link_to "Delete", body_path(@body), method: :delete, data:{confirm: "Are you sure?"} %>

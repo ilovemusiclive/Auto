@@ -1,0 +1,7 @@
+<h1>Index Manufacturer Page</h1>
+
+<% @manufacturers.each do |manufacturer| %>
+<h2><%= link_to manufacturer.name, manufacturer_path(manufacturer) %></h2>
+<% end %>
+
+<%= link_to "Back", root_path %>

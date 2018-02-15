@@ -1,0 +1,10 @@
+<h2>Fuel Show</h2>
+
+<h4><%= @fuel.manufacturer.name %></h4></br></br>
+<h2><%= @fuel.name %></h2></br></br>
+<h2><%= @fuel.description %></h2></br></br>
+
+
+<%= link_to "Back", fuels_path %></br></br>
+<%= link_to "Edit", edit_fuel_path(@fuel) %></br></br>
+<%= link_to "Delete", fuel_path(@fuel), method: :delete, data: {confirm: "Are you sure?"} %>

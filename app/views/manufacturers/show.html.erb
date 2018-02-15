@@ -1,0 +1,9 @@
+<h1>Show Manufacturer Page</h1>
+
+<h2><%= @manufacturer.name %></h2>
+<h2><%= @manufacturer.description %></h2>
+<h2><%= @manufacturer.date %></h2>
+
+<%= link_to "Back", manufacturers_path %>
+<%= link_to "Edit", edit_manufacturer_path(@manufacturer) %>
+<%= link_to "Delete", manufacturer_path(@manufacturer), method: :delete, data: {confirm: "Are you sure?"} %>

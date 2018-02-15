@@ -1,0 +1,9 @@
+<h2>Fuel Efficiency Index</h2>
+
+<% @fuel_efficiencies.each do |fuel_efficiency| %>
+<h2><%= link_to fuel_efficiency.mpg, fuel_efficiency_path(fuel_efficiency) %></h2>
+<% end %>
+
+<%= link_to "Back", root_path %>
+
+

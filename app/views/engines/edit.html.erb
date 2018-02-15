@@ -1,0 +1,33 @@
+<h2>Engine Edit</h2>
+
+<%= simple_form_for @engine, :html => { :multipart => true } do |f| %></br></br>
+
+  <%= f.input :name %></br></br>
+  <%= f.input :size %></br></br>
+  <%= f.input :litre %></br></br>
+  <%= f.input :cylinder %></br></br>
+  <%= f.input :valve %></br></br>
+  <%= f.input :hp %></br></br>
+  <%= f.input :kw %></br></br>
+  <%= f.input :torque %></br></br>
+  <%= f.input :type %></br></br>
+  <%= f.input :mark %></br></br>
+  <%= f.input :description, as: :text %></br></br>
+  <%= f.input :fuel_system %></br></br>
+  <%= f.input :meta_title %></br></br>
+  <%= f.input :meta_description %></br></br>
+  <%= f.input :permalink %></br></br>
+
+    <%= f.input :production_start, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12, discard_day: true, order: [:month, :year] %></br></br>
+
+  <%= f.input :production_end, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12, discard_day: true, order: [:month, :year] %></br></br>
+
+  <%= f.select :manufacturer_id, @manufacturers %></br></br>
+
+ <%= f.input :no_index, as: :boolean, checked_value: true, unchecked_value: false %></br></br>
+
+  <%= f.button :submit %>
+
+<% end %>
+
+<%= link_to "Back", engines_path %>

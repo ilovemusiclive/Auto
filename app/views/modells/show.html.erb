@@ -1,0 +1,12 @@
+<h1>Show Modell Page</h1>
+
+<h4><%= @modell.manufacturer.name %></h4>
+<h2><%= @modell.name %></h2>
+<h2><%= @modell.description %></h2>
+<h2><%= @modell.date %></h2>
+
+
+
+<%= link_to "Back", modells_path %>
+<%= link_to "Edit", edit_modell_path(@modell) %>
+<%= link_to "Delete", modell_path(@modell), method: :delete, data: {confirm: "Are you sure?"} %>

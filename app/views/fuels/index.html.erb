@@ -1,0 +1,7 @@
+<h2>Fuel Index</h2>
+
+<% @fuels.each do |fuel| %>
+<h2><%= link_to fuel.manufacturer.name + " " + fuel.name, fuel_path(fuel) %></h2>
+<% end %>
+
+<%= link_to "Back", root_path %>

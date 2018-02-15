@@ -1,0 +1,7 @@
+<h1>Index Car Page</h1>
+
+<% @cars.each do |car| %>
+<h2><%= link_to car.manufacturer.name + " " + car.modell.name, car_path(car) %></h2>
+<% end %>
+
+<%= link_to "Back", root_path %>

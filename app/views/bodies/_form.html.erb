@@ -1,0 +1,15 @@
+<h1>Form Body Page</h1>
+
+<%= simple_form_for @body, :html => { :multipart => true } do |f| %></br></br>
+
+  <%= f.input :name %></br></br>
+
+  <%= f.input :description, as: :text %></br></br>
+
+  <%= f.input :no_index, as: :boolean, checked_value: true, unchecked_value: false %></br></br>
+
+  <%= f.button :submit %></br></br>
+
+<% end %>
+
+<%= link_to "Back", root_path %>

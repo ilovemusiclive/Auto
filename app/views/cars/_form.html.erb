@@ -1,0 +1,30 @@
+
+
+
+<%= simple_form_for @car, :html => { :multipart => true } do |f| %>
+
+  <%= f.input :description, as: :text %></br></br>
+
+  <%= f.input :date, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12, discard_day: true, order: [:month, :year] %></br></br>
+
+  <%= select_tag(:manufacturer_id, options_for_select(@manufacturers), :prompt => "Select Manufacturer") %></br></br>
+
+  <%= select_tag(:modell_id, options_for_select(@modells), :prompt => "Select Modell") %></br></br>
+
+  <%= select_tag(:body_id, options_for_select(@bodies), :prompt => "Select Body Type") %></br></br>
+
+  <%= select_tag(:engine_id, options_for_select(@engines), :prompt => "Select Engine") %></br></br>
+
+  <%= select_tag(:speed_id, options_for_select(@speeds), :prompt => "Select speed") %></br></br>
+
+  <%= select_tag(:fuel_id, options_for_select(@fuels), :prompt => "Select Fuel Type") %></br></br>
+
+  <%= select_tag(:fuel_efficiency_id, options_for_select(@fuel_efficiencies), :prompt => "Select Fuel Rate") %></br></br>
+
+  <%= f.input :no_index, as: :boolean, checked_value: true, unchecked_value: false %></br></br>
+
+
+  <%= f.button :submit %>
+
+<% end %>
+

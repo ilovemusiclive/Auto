@@ -1,0 +1,17 @@
+<h1>Show Car Page</h1>
+
+<h4><%= @car.manufacturer.name %></h4>
+<h2><%= @car.modell.name %></h2>
+<h4><%= @car.body.name %></h4>
+<h2><%= @car.description %></h2>
+<h2><%= @car.date %></h2>
+<h2><%= @car.fuel.name %></h2>
+<h2><%= @car.fuel_efficiency.mpg %></h2>
+<h2><%= @car.speed.sixty %></h2>
+<h2><%= @car.speed.hundered %></h2>
+<h2><%= @car.speed.top %></h2>
+
+<%= link_to "Back", cars_path %>
+<%= link_to "Edit", edit_car_path(@car) %>
+<%= link_to "Delete", car_path(@car), method: :delete, data: {confirm: "Are you sure?"} %>
+

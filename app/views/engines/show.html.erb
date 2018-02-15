@@ -1,0 +1,25 @@
+<h2>Engine Show</h2>
+
+<h4><%= @engine.manufacturer.name %></h4>
+<h2><%= @engine.name %></h2>
+<h4><%= @engine.size %></h4>
+<h2><%= @engine.litre %></h2>
+<h2><%= @engine.cylinder %></h2>
+<h2><%= @engine.valve %></h2>
+<h2><%= @engine.hp %></h2>
+<h2><%= @engine.kw %></h2>
+<h2><%= @engine.torque %></h2>
+<h2><%= @engine.production_start %></h2>
+<h2><%= @engine.production_end %></h2>
+<h2><%= @engine.type %></h2>
+<h2><%= @engine.mark %></h2>
+<h2><%= @engine.fuel_system %></h2>
+<h1><%= @engine.description %></h1>
+<h2><%= @engine.meta_title %></h2>
+<h2><%= @engine.meta_description %></h2>
+<h2><%= @engine.permalink %></h2>
+<h2><%= @engine.no_index %></h2>
+
+<%= link_to "Back", engines_path %>
+<%= link_to "Edit", edit_engine_path(@engine) %>
+<%= link_to "Delete", engine_path(@engine), method: :delete, data: {confirm: "Are you sure?"} %>

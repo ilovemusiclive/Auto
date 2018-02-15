@@ -1,0 +1,8 @@
+<h2>Speed Index</h2>
+
+<% @speeds.each do |speed| %>
+<h2><%= link_to speed.sixty, speed_path(speed) %></h2>
+<% end %>
+
+<%= link_to "Back", root_path %>
+

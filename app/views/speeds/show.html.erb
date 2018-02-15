@@ -1,0 +1,10 @@
+<h2>Speed Show</h2>
+
+<h4><%= @speed.sixty %></h4>
+<h4><%= @speed.hundered %></h4>
+<h4><%= @speed.top %></h4>
+
+<%= link_to "Back", speeds_path %>
+<%= link_to "Edit", edit_speed_path(@speed) %>
+<%= link_to "Delete", speed_path(@speed), method: :delete, data:{confirm: "Are you sure?"} %>
+

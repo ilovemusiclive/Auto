@@ -1,0 +1,11 @@
+<h1>Form Bike Page</h1>
+
+<%= simple_form_for @bike, :html => { :multipart => true } do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description, as: :text %>
+  <%= f.input :date, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12, discard_day: true, order: [:month, :year] %>
+  <%= select_tag(:manufacturer_id, options_for_select(@manufacturers), :prompt => "Select Manufacturer") %></br></br>
+  <%= f.button :submit %>
+
+  <%= f.input :no_index, as: :boolean, checked_value: true, unchecked_value: false %>
+<% end %>

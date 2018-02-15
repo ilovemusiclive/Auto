@@ -1,0 +1,14 @@
+<h2>Fuel Form</h2>
+<%= simple_form_for @fuel, :html => { :multipart => true } do |f| %></br></br>
+
+  <%= f.input :name %></br></br>
+
+  <%= f.input :description, as: :text %></br></br>
+
+  <%= select_tag(:manufacturer_id, options_for_select(@manufacturers), :prompt => "Select Manufacturer") %></br></br>
+
+  <%= f.button :submit %>
+
+<% end %>
+
+<%= link_to "Back", fuels_path %>

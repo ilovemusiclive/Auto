@@ -1,0 +1,10 @@
+<h2>Fuel Efficiency Show</h2>
+
+
+<h4><%= @fuel_efficiency.mpg %></h4>
+<h4><%= @fuel_efficiency.kml %></h4>
+
+<%= link_to "Back", fuel_efficiencies_path %>
+<%= link_to "Edit", edit_fuel_efficiency_path(@fuel_efficiency) %>
+<%= link_to "Delete", fuel_efficiency_path(@fuel_efficiency), method: :delete, data:{confirm: "Are you sure?"} %>
+

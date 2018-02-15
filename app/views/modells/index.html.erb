@@ -1,0 +1,7 @@
+<h1>Index Modell Page</h1>
+
+<% @modells.each do |modell| %>
+<h2><%= link_to modell.manufacturer.name + " " + modell.name, modell_path(modell) %></h2>
+<% end %>
+
+<%= link_to "Back", root_path %>

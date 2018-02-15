@@ -1,0 +1,10 @@
+<h1>Show Bike Page</h1>
+
+<h4><%= @bike.manufacturer.name %></h4>
+<h4><%= @bike.name %></h4>
+<h4><%= @bike.description %></h4>
+<h4><%= @bike.date %></h4>
+
+<%= link_to "Back", bikes_path %>
+<%= link_to "Edit", edit_bike_path(@bike) %>
+<%= link_to "Delete", bike_path(@bike), method: :delete, data: {confirm: "Are you sure?"} %>
