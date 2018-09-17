@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180205161149) do
+ActiveRecord::Schema.define(version: 20180215095630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20180205161149) do
     t.integer "fuel_id"
     t.integer "fuel_efficiency_id"
     t.integer "speed_id"
+    t.integer "price_id"
   end
 
   create_table "engines", force: :cascade do |t|
@@ -126,6 +127,17 @@ ActiveRecord::Schema.define(version: 20180205161149) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "manufacturer_id"
+  end
+
+  create_table "prices", force: :cascade do |t|
+    t.float "new"
+    t.float "con_deal"
+    t.float "con_one"
+    t.float "con_two"
+    t.float "con_three"
+    t.float "con_four"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "speeds", force: :cascade do |t|

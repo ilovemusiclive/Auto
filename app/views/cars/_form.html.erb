@@ -15,7 +15,7 @@
 
   <%= select_tag(:engine_id, options_for_select(@engines), :prompt => "Select Engine") %></br></br>
 
-  <%= select_tag(:speed_id, options_for_select(@speeds), :prompt => "Select speed") %></br></br>
+  <%= select_tag(:speed_id, options_for_select (@speeds) @speeds = Speed.all.order("top ASC"), :prompt => "Select Top Speed") %></br></br>
 
   <%= select_tag(:fuel_id, options_for_select(@fuels), :prompt => "Select Fuel Type") %></br></br>
 

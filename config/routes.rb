@@ -12,6 +12,6 @@ Rails.application.routes.draw do
 
   get 'pages/terms'
 
-resources :manufacturers, :cars, :bikes, :modells, :bodies, :engines, :fuels, :fuel_efficiencies, :speeds
+resources :manufacturers, :cars, :bikes, :modells, :bodies, :engines, :fuels, :fuel_efficiencies, :speeds, :prices
   root "pages#home"
 end

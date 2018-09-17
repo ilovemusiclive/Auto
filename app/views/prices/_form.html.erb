@@ -1,0 +1,19 @@
+<h2>Price Form</h2>
+
+<%= simple_form_for @price, :html => { :multipart => true } do |f| %></br></br>
+
+  <%= f.input :new %></br></br>
+
+  <%= f.input :con_one%></br></br>
+
+  <%= f.input :con_two %></br></br>
+
+  <%= f.input :con_three %></br></br>
+
+  <%= f.input :con_four %></br></br>
+
+  <%= f.button :submit %></br></br>
+
+<% end %>
+
+<%= link_to "Back", root_path %>

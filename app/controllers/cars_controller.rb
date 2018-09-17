@@ -15,6 +15,7 @@ class CarsController < ApplicationController
     @fuels = Fuel.all.map{ |f| [f.name, f.id]}
     @fuel_efficiencies = FuelEfficiency.all.map{ |g| [g.mpg, g.id]}
     @speeds = Speed.all.map{ |s| [s.sixty, s.hundered, s.top, s.id]}
+    @prices = Price.all.map{ |d| [d.con_one, d.id]}
   end
 
   def create
@@ -26,6 +27,7 @@ class CarsController < ApplicationController
     @car.fuel_id = params[:fuel_id]
     @car.fuel_efficiency_id = params[:fuel_efficiency_id]
     @car.speed_id = params[:speed_id]
+    @car.price_id = params[:price_id]
      if @car.save
       redirect_to root_path
     else
@@ -45,6 +47,7 @@ class CarsController < ApplicationController
     @fuels = Fuel.all.map{ |f| [f.name, f.id]}
     @fuel_efficiencies = FuelEfficiency.all.map{ |g| [g.mpg, g.id]}
     @speeds = Speed.all.map{ |s| [s.sixty, s.hundered, s.top, s.id]}
+    @prices = Price.all.map{ |d| [d.con_one, d.id]}
   end
 
   def update
@@ -55,6 +58,7 @@ class CarsController < ApplicationController
     @car.fuel_id = params[:fuel_id]
     @car.fuel_efficiency_id = params[:fuel_efficiency_id]
     @car.speed_id = params[:speed_id]
+    @car.price_id = params[:price_id]
     if @car.update(car_params)
       redirect_to car_path(@car)
     else
@@ -70,7 +74,7 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.require(:car).permit(:description, :manufacturer_id, :modell_id, :body_id, :engine_id, :fuel_id, :fuel_efficiency_id, :speed_id, :date, :meta_title, :meta_description, :permalink, :no_index)
+    params.require(:car).permit(:description, :manufacturer_id, :modell_id, :body_id, :engine_id, :fuel_id, :fuel_efficiency_id, :speed_id, :price_id, :date, :meta_title, :meta_description, :permalink, :no_index)
   end
 
   def find_cars

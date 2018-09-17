@@ -1,0 +1,11 @@
+<h2>Price Show</h2>
+
+<h4><%= @price.new %></h4>
+<h4><%= @price.con_one %></h4>
+<h4><%= @price.two %></h4>
+<h4><%= @price.three %></h4>
+<h4><%= @price.four %></h4>
+
+<%= link_to "Back", prices_path %>
+<%= link_to "Edit", edit_price_path(@price) %>
+<%= link_to "Delete", price_path(@price), method: :delete, data:{confirm: "Are you sure?"} %>
